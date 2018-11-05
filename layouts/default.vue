@@ -8,6 +8,13 @@
   export default {
     data() {
       return {
+        icons: [
+          'fab fa-facebook',
+          'fab fa-twitter',
+          'fab fa-google-plus',
+          'fab fa-linkedin',
+          'fab fa-instagram'
+        ],
         clipped: false,
         drawer: true,
         fixed: false,
@@ -26,11 +33,13 @@
 
 <style>
 .page-enter-active, .page-leave-active {
-    transition: all 2.5s;
+    transition: all 1.5s;
 }
 
 .page-enter, .page-leave-active {
     opacity: 0;
     transform: scale(1);
 }
+
+
 </style>

@@ -11,60 +11,61 @@
       </v-layout>
   </v-parallax>
 
-        <v-layout align-center justify-center column fill-height>
-            <h1 data-aos="fade" data-aos-duration="2000" data-aos-mirror="true"  data-aos-easing="ease-in-out" class="mt-5">Nuxt and Veutify</h1>
+        <v-layout align-center justify-center column fill-height wrap>
+            <h1 data-aos="fade" data-aos-duration="2000" data-aos-mirror="true" wrap  data-aos-easing="ease-in-out" class="mt-5 titleTop text-xs-center">Nuxt and Veutify</h1>
         </v-layout>
 
-        <v-layout align-center justify-center column fill-height>
-            <p data-aos="fade" data-aos-duration="2000" data-aos-mirror="true"  data-aos-easing="ease-in-out" class="mb-5">This website showcase the use of Veutify, Nuxt and AOS</p>
+        <v-layout align-center justify-center column fill-height wrap>
+            <p data-aos="fade" data-aos-duration="2000" data-aos-mirror="true" wrap data-aos-easing="ease-in-out" class="mb-5 text-xs-center">This website showcase the use of Veutify, Nuxt and AOS</p>
         </v-layout>
 
-    <v-layout align-center justify-space-around row fill-height>
+        <v-spacer class="mt-5"></v-spacer>
 
-      <v-card  data-aos="fade-right" data-aos-duration="2100" data-aos-mirror="true" data-aos-anchor-placement="top-center" class="mr-5 elevation-13 cards">
+    <v-layout align-center justify-space-around row fill-height wrap>
+      <v-card  data-aos="fade-right" data-aos-duration="1500" data-aos-mirror="true" data-aos-anchor-placement="top-center" class="cards text-xs-center">
         <v-img
           class="cardImg"
           src="https://picsum.photos/610/300?image=867"
-          height="200px"
+          height="150px"
         >
         </v-img>
         
         <v-card-title primary-title>
           <div>
-            <div class="headline">Top western road trips</div>
-            <span class="grey--text">1,000 miles of wonder</span>
+            <div class="headline text-xs-center">Fluid  & material design</div>
+            <span class="grey--text text-xs-center">Using the Vuetify framework</span>
           </div>
         </v-card-title>
       </v-card>
 
-      <v-card  data-aos="fade-up" data-aos-duration="2100" data-aos-mirror="true" data-aos-anchor-placement="top-center" class="elevation-13 cards">
+      <v-card  data-aos="fade-down" data-aos-duration="1900" data-aos-mirror="true" data-aos-anchor-placement="top-center" class="cards text-xs-center">
         <v-img
-          class="cardImg"
+          class="cardImg elevation-13"
           src="https://picsum.photos/710/300/?image=877"
-          height="200px"
+          height="150px"
         >
         </v-img>
 
         <v-card-title primary-title>
           <div>
-            <div class="headline">Top western road trips</div>
-            <span class="grey--text">1,000 miles of wonder</span>
+            <div class="headline text-xs-center">Built with Vue & Nuxt.js</div>
+            <span class="grey--text text-xs-center">1,000 miles of wonder</span>
           </div>
         </v-card-title>
       </v-card>
 
-      <v-card data-aos="fade-left" data-aos-duration="2100" data-aos-mirror="true" data-aos-anchor-placement="top-center" class="ml-5 elevation-13 cards">
+      <v-card data-aos="fade-left" data-aos-duration="2100" data-aos-mirror="true" data-aos-anchor-placement="top-center" class="cards text-xs-center">
         <v-img
-          class="cardImg"
+          class="cardImg elevation-13"
           src="https://picsum.photos/410/300?image=914"
-          height="200px"
+          height="150px"
         >
         </v-img>
 
         <v-card-title primary-title>
           <div>
-            <div class="headline">Top western road trips</div>
-            <span class="grey--text">1,000 miles of wonder</span>
+            <div class="headline text-xs-center">Top western road trips</div>
+            <span class="grey--text text-xs-center">1,000 miles of wonder</span>
           </div>
         </v-card-title>
       </v-card>
@@ -84,9 +85,8 @@
       </v-layout>
   </v-parallax>
 
-
-
-
+  <BottomNav/>
+  
   </div>
   
   
@@ -95,11 +95,13 @@
 <script>
 import Logo from '~/components/Logo.vue'
 import VuetifyLogo from '~/components/VuetifyLogo.vue'
+import BottomNav from '~/components/BottomNav.vue'
 
 export default {
   components: {
     Logo,
-    VuetifyLogo
+    VuetifyLogo,
+    BottomNav
   },
     data: () => ({
       show: false
@@ -114,6 +116,10 @@ element.style {
      height: 500px;
 }
 
+.titleTop {
+  color: tomato;
+}
+
 
 .v-parallax {
   height: 600px !important;
@@ -126,11 +132,34 @@ element.style {
   color: whitesmoke;
   margin-top: 10px;
   text-decoration: none;
+  font-family: 'Montserrat' !important;
 }
 
 .headlineTitle {
-  border-radius: 50%;
+  /* border-radius: 50%; */
   background-color: brown;
+}
+
+.cards {
+  border-radius: 100%;
+  background-color: transparent !important;
+  border: none !important;
+}
+
+.v-card {
+  box-shadow: none !important;
+  text-align: center;
+}
+
+
+.cardImg {
+  width: 150px;
+  display: inline-block;
+  border-radius: 100%;
+}
+
+.headline {
+    font-family: 'Montserrat' !important;
 }
 
 

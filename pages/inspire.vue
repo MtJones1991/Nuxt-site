@@ -8,74 +8,53 @@
         <!-- <Logo/> -->
       </v-layout>
 
-  <v-layout row>
-    <v-flex xs12>
-      <v-card
-        :color="colors[color]"
-        class="custom-ripple"
-        ripple
-        height="300"
-        @mousemove="color = (color + 1) % colors.length"
-      >
-        <div class="title white--text pl-3 pt-3">{{ colors[color] }}</div>
-      </v-card>
-    </v-flex>
-  </v-layout>
-
+  <v-item-group>
+    <v-container grid-list-md>
+      <v-layout wrap>
+        <v-flex
+          v-for="n in 3"
+          :key="n"
+          xs12
+          md4
+        >
+          <v-item class="cardA">
+            <v-card
+              slot-scope="{ active, toggle }"
+              class="d-flex align-center"
+              dark
+              height="265"
+            >
+                      <v-img
+          class="cardImg"
+          src="https://picsum.photos/610/300?image=867"
+          height="265px"
+        >
+        </v-img>
+            </v-card>
+          </v-item>
+        </v-flex>
+      </v-layout>
+    </v-container>
+  </v-item-group>
+  <BottomNav/>
   </div>
 </template>
 
 <script>
+import BottomNav from '~/components/BottomNav.vue'
+
   export default {
-    data () {
-      return {
-        color: 0,
-        colors: [
-          'red',
-          'pink',
-          'purple',
-          'deep-purple',
-          'indigo',
-          'blue',
-          'light-blue',
-          'cyan',
-          'teal',
-          'green',
-          'light-green',
-          'lime',
-          'yellow',
-          'amber',
-          'orange',
-          'deep-orange',
-          'brown',
-          'blue-grey',
-          'grey',
-          'red',
-          'pink',
-          'purple',
-          'deep-purple',
-          'indigo',
-          'blue',
-          'light-blue',
-          'cyan',
-          'teal',
-          'green',
-          'light-green',
-          'lime',
-          'yellow',
-          'amber',
-          'orange',
-          'deep-orange',
-          'brown',
-          'blue-grey',
-          'grey'
-        ]
-      }
-    }
+    components: {
+      BottomNav
+    },
   }
 </script>
 
 <style lang="stylus">
   .custom-ripple
     user-select: none
+
+  .cardA {
+    border-radius: 100%;
+  }
 </style>
