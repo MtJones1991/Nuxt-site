@@ -1,11 +1,10 @@
 <template>
             <v-footer
             dark
-            height="auto"
+           
           >
            <v-layout
               class="navLayout m-0 p-0"
-              justify-center
               row
               wrap
             >
@@ -23,7 +22,6 @@
                   icon
                 >
                     <router-link class="links" :to="`#${icon.link}`" replace>
-
                       <v-icon  v-on:click="redirectPage(icon.link)" size="24px">{{ icon.icon }}
                       </v-icon>
 

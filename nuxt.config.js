@@ -38,7 +38,8 @@ module.exports = {
   */
   plugins: [
     '@/plugins/vuetify',
-    '@/plugins/aos.js'
+    '@/plugins/aos.js',
+    '@/plugins/mo.js'
    
   ],
 

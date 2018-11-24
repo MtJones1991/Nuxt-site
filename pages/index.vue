@@ -69,6 +69,7 @@
           </div>
         </v-card-title>
       </v-card>
+      
   </v-layout>
 
 
@@ -96,7 +97,6 @@
 import Logo from '~/components/Logo.vue'
 import VuetifyLogo from '~/components/VuetifyLogo.vue'
 import BottomNav from '~/components/BottomNav.vue'
-
 export default {
   components: {
     Logo,
@@ -110,61 +110,42 @@ export default {
 </script>
 
 <style>
-
-
 element.style {
      height: 500px;
 }
-
 .titleTop {
   color: tomato;
 }
-
-
 .v-parallax {
   height: 600px !important;
   width: 100%;
   margin-top: 25px;
-
 }
-
 .inspire {
   color: whitesmoke;
   margin-top: 10px;
   text-decoration: none;
   font-family: 'Montserrat' !important;
 }
-
 .headlineTitle {
   /* border-radius: 50%; */
   background-color: brown;
 }
-
 .cards {
   border-radius: 100%;
   background-color: transparent !important;
   border: none !important;
 }
-
 .v-card {
   box-shadow: none !important;
   text-align: center;
 }
-
-
 .cardImg {
   width: 150px;
   display: inline-block;
   border-radius: 100%;
 }
-
 .headline {
     font-family: 'Montserrat' !important;
 }
-
-
-
-
-
 </style>
-

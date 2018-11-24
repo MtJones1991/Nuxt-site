@@ -1,6 +1,8 @@
 <template>
-  <v-app dark @click="tune">
-        <nuxt />  
+  <v-app dark>
+    <div @click="tune">
+        <nuxt/>
+    </div>  
   </v-app>
 </template>
 
@@ -10,18 +12,6 @@ import mojs from 'mo-js'
   export default {
     data() {
       return {
-           OPTS: {
-      fill: 'none',
-      radius: 25,
-      strokeWidth: { 50 : 0 },
-      scale: { 0: 1 },
-      angle: { 'rand(-35, -70)': 0 },
-      duration: 500,
-      left: 0, top: 0,
-      easing: 'cubic.out'
-    },
-    circle1: undefined,
-    circle2: undefined,
         icons: [
           'fab fa-facebook',
           'fab fa-twitter',
@@ -39,35 +29,48 @@ import mojs from 'mo-js'
         miniVariant: false,
         right: true,
         rightDrawer: false,
-        title: 'Vuetify.js'
+        title: 'Vuetify.js',
+        OPTS: {
+              fill: 'none',
+              radius: 55,
+              strokeWidth: { 50 : 0 },
+              scale: { 0: 1 },
+              angle: { 'rand(-35, -70)': 0 },
+              duration: 1500,
+              left: 0, top: 0,
+              easing: 'cubic.out'
+            },
+            circle1: undefined,
+            circle2: undefined
+        
       }
     },
-      mounted () {
-    this.circle1 = new mojs.Shape({
-      ...this.OPTS,
-      stroke: 'cyan',
-    })
-    
-    this.circle2 = new mojs.Shape({
-      ...this.OPTS,
-      radius: { 0 : 15 },
-      strokeWidth: { 30: 0 },
-      stroke: 'magenta',
-      delay: 'rand(75, 150)'
-    })
-  },
+    mounted () {
+      this.circle1 = new mojs.Shape({
+        ...this.OPTS,
+        stroke: '#B71C1C',
+      })
+      
+      this.circle2 = new mojs.Shape({
+        ...this.OPTS,
+        radius: { 0 : 15 },
+        strokeWidth: { 30: 0 },
+        stroke: 'orange',
+        delay: 'rand(75, 150)'
+      })
+    },
 
-  methods: {
-    tune (e) {
-      this.circle1
-        .tune({ x: e.pageX, y: e.pageY })
-        .replay();
+    methods: {
+      tune (e) {
+        this.circle1
+          .tune({ x: e.pageX, y: e.pageY })
+          .replay();
 
-      this.circle2
-        .tune({ x: e.pageX, y: e.pageY })
-        .replay();
+        this.circle2
+          .tune({ x: e.pageX, y: e.pageY })
+          .replay();
+      }
     }
-  }
   }
 </script>
 
@@ -90,10 +93,7 @@ body {
   background: #333;
 }
 
-#app div {
-  width: 100vw;
-  height: 100vh;
-}
 
 
 </style>
+
