@@ -15,7 +15,9 @@
     "aos": "^3.0.0-beta.6",
     "cross-env": "^5.2.0",
     "express": "^4.16.3",
+    "mo-js": "^0.288.2",
     "nuxt": "^2.0.0",
+    "vue-mo-js": "^1.0.0",
     "vuetify": "^1.2.4"
   },
   "devDependencies": {

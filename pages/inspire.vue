@@ -7,41 +7,13 @@
       </v-btn>
         <!-- <Logo/> -->
       </v-layout>
-
-  <v-item-group>
-    <v-container grid-list-md>
-      <v-layout wrap>
-        <v-flex
-          v-for="n in 3"
-          :key="n"
-          xs12
-          md4
-        >
-          <v-item class="cardA">
-            <v-card
-              slot-scope="{ active, toggle }"
-              class="d-flex align-center"
-              dark
-              height="265"
-            >
-                      <v-img
-          class="cardImg"
-          src="https://picsum.photos/610/300?image=867"
-          height="265px"
-        >
-        </v-img>
-            </v-card>
-          </v-item>
-        </v-flex>
-      </v-layout>
-    </v-container>
-  </v-item-group>
   <BottomNav/>
   </div>
 </template>
 
 <script>
 import BottomNav from '~/components/BottomNav.vue'
+import VueMoJS from 'vue-mo-js'
 
   export default {
     components: {
