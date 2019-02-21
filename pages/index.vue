@@ -3,8 +3,8 @@
 <div>
 
  <v-parallax
-    class="paraImg elevation-21"
-    src="https://i.imgur.com/lpdgiTV.jpg" 
+    class="paraImg"
+    src="https://images.unsplash.com/reserve/unsplash_52a1c2d7d6f4f_1.JPG?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1052&q=80"
   >
       <v-layout align-center justify-center column fill-height>
           <Logo/>
@@ -191,7 +191,7 @@ element.style {
   color: tomato;
 }
 .v-parallax {
-  height: 600px !important;
+  height: 700px !important;
   width: 100%;
   margin-top: 25px;
 }

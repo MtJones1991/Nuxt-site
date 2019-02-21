@@ -1,10 +1,13 @@
 <template>
   <div>
       <v-layout align-center justify-center column fill-height>
-      <h1 class="mt-3 mb-5">Home</h1>
-      <v-btn color="warning" class="mt-3 mb-5">
-        <nuxt-link class="inspire" to="/">Home</nuxt-link>     
-      </v-btn>
+      <v-layout align-center justify-center column fill-height class="pb-5 mb-5">
+        <h4 
+        class="display-1 pt-5 mt-5"
+        color="white"
+        data-aos="zoom-in" data-aos-duration="2100" data-aos-mirror="true"
+        ><nuxt-link class="inspire" to="/">Home</nuxt-link></h4>
+      </v-layout>
         <!-- <Logo/> -->
       </v-layout>
 
